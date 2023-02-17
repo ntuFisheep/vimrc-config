@@ -45,6 +45,8 @@ call vundle#begin('~/.config/nvim/bundle')
     " Plugin 'bfrg/vim-cpp-modern'
     " Plugin 'tomasiser/vim-code-dark'
     Plugin 'mileszs/ack.vim'
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()            " required
 
 call plug#begin('~/.config/nvim/plugged')
@@ -69,10 +71,7 @@ Plug 'junegunn/fzf.vim' " needed for previews
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'antoinemadec/coc-fzf'
 Plug 'jremmen/vim-ripgrep'
-Plug 'nvim-tree/nvim-web-devicons'
-Plug 'romgrk/barbar.nvim'
-" Plug 'prabirshrestha/vim-lsp'
-" Plug 'mattn/vim-lsp-settings'
+Plug 'nanozuki/tabby.nvim'
 filetype plugin on    " required
 
 call plug#end()
@@ -148,6 +147,7 @@ if has("autocmd")
 endif
 
 " coc
+let g:coc_global_extensions = ['coc-clangd', 'coc-snippets', 'coc-pyright', 'coc-sh']
 "" GoTo code navigation
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -176,17 +176,10 @@ if executable('rg')
     nnoremap <silent> <Leader>fw :RgCWord<CR>
 endif
 
-" barbar.nvim tabs settings
-" Goto buffer in position...
-nnoremap <silent> <leader>1 <Cmd>BufferGoto 1<CR>
-nnoremap <silent> <leader>2 <Cmd>BufferGoto 2<CR>
-nnoremap <silent> <leader>3 <Cmd>BufferGoto 3<CR>
-nnoremap <silent> <leader>4 <Cmd>BufferGoto 4<CR>
-nnoremap <silent> <leader>5 <Cmd>BufferGoto 5<CR>
-nnoremap <silent> <leader>6 <Cmd>BufferGoto 6<CR>
-nnoremap <silent> <leader>7 <Cmd>BufferGoto 7<CR>
-nnoremap <silent> <leader>8 <Cmd>BufferGoto 8<CR>
-nnoremap <silent> <leader>9 <Cmd>BufferGoto 9<CR>
-nnoremap <silent> <leader>0 <Cmd>BufferLast<CR>
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+" let g:airline_theme='wombat'
+" let g:airline_theme='solarized_flood'
+let g:airline_theme='tomorrow'
 
-let g:coc_global_extensions = ['coc-clangd', 'coc-snippets', 'coc-pyright', 'coc-sh']
