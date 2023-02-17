@@ -181,5 +181,5 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 " let g:airline_theme='wombat'
 " let g:airline_theme='solarized_flood'
-let g:airline_theme='tomorrow'
+let g:airline_theme='wombat'
 
