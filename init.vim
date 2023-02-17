@@ -188,3 +188,5 @@ nnoremap <silent> <leader>7 <Cmd>BufferGoto 7<CR>
 nnoremap <silent> <leader>8 <Cmd>BufferGoto 8<CR>
 nnoremap <silent> <leader>9 <Cmd>BufferGoto 9<CR>
 nnoremap <silent> <leader>0 <Cmd>BufferLast<CR>
+
+let g:coc_global_extensions = ['coc-clangd', 'coc-snippets', 'coc-pyright', 'coc-sh']

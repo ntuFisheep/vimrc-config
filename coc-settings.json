@@ -1,0 +1,13 @@
+{
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd",
+  "inlayHint.enable": false,
+  "snippets.ultisnips.pythonPrompt": false,
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"]
+    }
+  }
+}
+
